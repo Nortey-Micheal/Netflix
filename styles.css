@@ -17,29 +17,89 @@ body{
     background-color: var(--mainBg);
     color: var(--whiteTxt);
     font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+    font-size: clamp(1vw,10px,3px);
 }
 
 .container{
     padding: 15px;
     width: min(1100px,90vw);
     margin: 0 auto;
+    
+}
+
+header{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(images/netFlix.jpg);
+    background-size: auto;
+    height: max(500px,40vw);
+}
+
+header,section{
     background-color: var(--blackBg);
+}
+
+header img[src *=".svg"]{
+    width: 89px;
+    height: 30px;
+}
+
+header>div>div:first-of-type{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+header>div>div:last-of-type{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+header button{
+    background-color: var(--red);
+    color: var(--whiteTxt);
+    border-radius: 3px;
+    padding: 5px 10px;
+    border: none;
+}
+
+header>div>div:first-of-type button{
+    font-weight: 600;
+}
+
+header>div>div:last-of-type button{
+    font-weight: 900;
+}
+
+header input{
+    padding: 5px 10px;
+    background-color: var(--lightGrey);
+    color: var(--whiteTxt);
+    border: 1px solid var(--mainBg);
+    opacity: 90%;
 }
 
 img[src *=".png"]{
     width: min(700px,80vw);
 }
 
-img[src *=".svg"]{
-    color: var(--red);
-}
 
 img[src *=".jpg"]{
     width: min(700px,80vw);
 }
 
 header,section{
-    border-bottom: var(--mainBg) 5px solid;
+    border-bottom: var(--mainBg) 8px solid;
 }
 
 @media screen and (max-width: 768px) {
