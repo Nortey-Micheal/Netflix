@@ -32,6 +32,10 @@ h2{
     font-weight: 700;
 }
 
+h3{
+    font-size: min(5vw,2rem);
+}
+
 p{
     font-size: max(1.125rem,1.3vw);
 }
@@ -121,7 +125,7 @@ header input{
     color: var(--whiteTxt);
     border: 1px solid var(--mainBg);
     opacity: 90%;
-    width: min(95%,650px);
+    width: min(80%,650px);
     line-height: 2;
     font-size: inherit;
     border-radius: 5px;
@@ -130,6 +134,10 @@ header input{
 header input:invalid{
     border: var(--red) 1px solid;
 
+}
+
+header input:placeholder-shown{
+    border: 1px solid var(--mainBg);
 }
 
 header input:valid{
@@ -150,12 +158,34 @@ header,section{
 }
 
 section{
-    padding: min(15vw,80px);
+    padding: max(3vw,60px) 0;
+}
+
+section:first-of-type>div {
+    display: flex;
+    align-items: center;
+    text-align: start;
+}
+
+section:nth-of-type(3)>div{
+    text-align: start;
+}
+
+section:nth-of-type(2)>div,section:nth-of-type(4)>div{
+    display: flex;
+    align-items: center;
+    text-align: start;
+    flex-direction: row-reverse;
 }
 
 @media screen and (max-width: 768px) {
     .container{
         margin: 0;
         width: 100%;
+    }
+
+    section:not(:last-of-type)>div {
+        display: block;
+        text-align: center;
     }
 }
