@@ -17,20 +17,29 @@ body{
     background-color: var(--mainBg);
     color: var(--whiteTxt);
     font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
-    font-size: clamp(1vw,10px,3px);
+    text-align: center;
 }
 
 .container{
-    padding: 15px;
-    width: min(1100px,90vw);
+    padding: 10px;
+    width: min(1300px,90vw);
     margin: 0 auto;
     
 }
 
+h2{
+    font-size: min(max(3vw,2rem),50px);
+    font-weight: 700;
+}
+
+p{
+    font-size: max(1.125rem,1.3vw);
+}
+
 header{
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(images/netFlix.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/netFlix.jpg);
     background-size: auto;
-    height: max(500px,40vw);
+    height: max(490px,35vw);
 }
 
 header,section{
@@ -38,15 +47,15 @@ header,section{
 }
 
 header img[src *=".svg"]{
-    width: 89px;
-    height: 30px;
+    width: max(89px,9vw);
+    height: max(30,3vw);
 }
 
 header>div>div:first-of-type{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 20px;
 }
 
 header .container{
@@ -60,8 +69,22 @@ header>div>div:last-of-type{
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    text-align: center;
     justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header>div>div:last-of-type p{
+    margin-top: 20px;
+    padding: 0 10px;
+}
+
+header>div>div:last-of-type>div>div{
+    /* flex: 1 1 0; */
+    display: flex;
+    gap: 10px;
+    flex-flow: row wrap;
     align-items: center;
 }
 
@@ -78,15 +101,34 @@ header>div>div:first-of-type button{
 }
 
 header>div>div:last-of-type button{
-    font-weight: 900;
+    font-weight: 600;
+    /* flex: 1 0 50px; */
+    min-width: max(10vw,130px);
+    /* margin: 0 auto; */
+    font-size: larger;
+    padding: 10px 15px;
 }
 
 header input{
-    padding: 5px 10px;
+    padding: 10px 15px;
     background-color: var(--lightGrey);
     color: var(--whiteTxt);
     border: 1px solid var(--mainBg);
     opacity: 90%;
+    min-width: min(60%,700px);
+    line-height: 2;
+    font-size: inherit;
+    border-radius: 5px;
+    min-width: 400px;
+}
+
+header input:invalid{
+    border: var(--red) 1px solid;
+
+}
+
+header input:valid{
+    border: 1px solid lightgreen;
 }
 
 img[src *=".png"]{
