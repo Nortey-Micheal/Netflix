@@ -35,6 +35,9 @@ h2{
 p{
     font-size: max(1.125rem,1.3vw);
 }
+header p+div>p{
+    font-size: max(1.125rem,1.1vw);
+}
 
 header{
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/netFlix.jpg);
@@ -84,8 +87,11 @@ header>div>div:last-of-type>div>div{
     /* flex: 1 1 0; */
     display: flex;
     gap: 10px;
-    flex-flow: row wrap;
+    flex-flow: column nowrap;
+    /* align-items: center; */
+    gap: 15px;
     align-items: center;
+    margin: 25px 0 0 0;
 }
 
 header button{
@@ -103,23 +109,22 @@ header>div>div:first-of-type button{
 header>div>div:last-of-type button{
     font-weight: 600;
     /* flex: 1 0 50px; */
-    min-width: max(10vw,130px);
+    max-width: max(10vw,200px);
     /* margin: 0 auto; */
     font-size: larger;
     padding: 10px 15px;
 }
 
 header input{
-    padding: 10px 15px;
+    padding: 7px 15px;
     background-color: var(--lightGrey);
     color: var(--whiteTxt);
     border: 1px solid var(--mainBg);
     opacity: 90%;
-    min-width: min(60%,700px);
+    width: min(95%,650px);
     line-height: 2;
     font-size: inherit;
     border-radius: 5px;
-    min-width: 400px;
 }
 
 header input:invalid{
@@ -142,6 +147,10 @@ img[src *=".jpg"]{
 
 header,section{
     border-bottom: var(--mainBg) 8px solid;
+}
+
+section{
+    padding: min(15vw,80px);
 }
 
 @media screen and (max-width: 768px) {
