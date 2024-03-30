@@ -15,7 +15,13 @@ buttons.forEach(function (button) {
 })
 
 function verifyRotate(event) {
-    switch (event.target) {
+    if (event.target == buttons[0]&&img[0].style.transform =="rotate(90deg)" ||
+        event.target == buttons[1]&&img[1].style.transform =="rotate(90deg)" ||
+        event.target == buttons[2]&&img[2].style.transform =="rotate(90deg)" ||
+        event.target == buttons[3]&&img[3].style.transform =="rotate(90deg)" ||
+        event.target == buttons[4]&&img[4].style.transform =="rotate(90deg)" ||
+        event.target == buttons[5]&&img[5].style.transform =="rotate(90deg)") {
+        switch (event.target) {
         case buttons[0]:
             img[0].style.transform = "rotate(-45deg)";
             break;
@@ -36,6 +42,14 @@ function verifyRotate(event) {
             break;
         default:
             break;
+        }
+    } else{
+        img[0].style.transform ="rotate(90deg)";
+        img[1].style.transform ="rotate(90deg)";
+        img[2].style.transform ="rotate(90deg)";
+        img[3].style.transform ="rotate(90deg)";
+        img[4].style.transform ="rotate(90deg)";
+        img[5].style.transform ="rotate(90deg)";
     }
 }
 
@@ -132,5 +146,7 @@ function verifyPara(event) {
         para2.style.display = "none";
         para3.style.display = "none";
         para4.style.display = "none";
+        para5.style.display = "none";
+        para6.style.display = "none";
     }
 }

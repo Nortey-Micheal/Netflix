@@ -38,21 +38,6 @@ h3{
     text-align: start;
 }
 
-
-section:first-of-type>div>div:last-of-type{
-}
-
-section:first-of-type>div img{
-    /* position: absolute; */
-}
-
-section:first-of-type img+video{
-    /* position: relative; */
-    
-    /* width: 60%; */
-
-}
-
 p{
     font-size: max(1.125rem,1.3vw);
 }
@@ -194,18 +179,24 @@ section:nth-of-type(2)>div,section:nth-of-type(4)>div{
 section:last-of-type p{
     display: none;
     background-color: var(--mainBg);
+    text-align: start;
+    padding: 15px;
+    border-top: 1px var(--lightGrey) solid;
 }
 
 section:last-of-type button{
     background-color: var(--mainBg);
-    border-bottom: 6px var(--lightGrey) solid;
+    border: none;
     padding: 15px;
     width: 100%;
-    border: none;
     color: var(--whiteTxt);
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+section:last-of-type button>img{
+    transform: rotate(90deg);
 }
 
 section:last-of-type button:hover{
