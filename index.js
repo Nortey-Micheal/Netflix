@@ -1,5 +1,5 @@
-const buttons = document.querySelectorAll("section:last-of-type button");
-const img = document.querySelectorAll("section:last-of-type button>img");
+const buttons = document.querySelectorAll("section:nth-of-type(5) button");
+const img = document.querySelectorAll("section:nth-of-type(5) button>img");
 let para1 = document.querySelector(".first");
 let para2 = document.querySelector(".second");
 let para3 = document.querySelector(".third");
