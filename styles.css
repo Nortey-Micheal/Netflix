@@ -33,7 +33,24 @@ h2{
 }
 
 h3{
-    font-size: min(5vw,2rem);
+    font-size: min(calc(20px + 0.5vw),min(5vw,2rem));
+    font-weight: 400;
+    text-align: start;
+}
+
+
+section:first-of-type>div>div:last-of-type{
+}
+
+section:first-of-type>div img{
+    /* position: absolute; */
+}
+
+section:first-of-type img+video{
+    /* position: relative; */
+    
+    /* width: 60%; */
+
 }
 
 p{
@@ -88,11 +105,9 @@ header>div>div:last-of-type p{
 }
 
 header>div>div:last-of-type>div>div{
-    /* flex: 1 1 0; */
     display: flex;
     gap: 10px;
     flex-flow: column nowrap;
-    /* align-items: center; */
     gap: 15px;
     align-items: center;
     margin: 25px 0 0 0;
@@ -112,9 +127,7 @@ header>div>div:first-of-type button{
 
 header>div>div:last-of-type button{
     font-weight: 600;
-    /* flex: 1 0 50px; */
     max-width: max(10vw,200px);
-    /* margin: 0 auto; */
     font-size: larger;
     padding: 10px 15px;
 }
@@ -176,6 +189,31 @@ section:nth-of-type(2)>div,section:nth-of-type(4)>div{
     align-items: center;
     text-align: start;
     flex-direction: row-reverse;
+}
+
+section:last-of-type p{
+    display: none;
+    background-color: var(--mainBg);
+}
+
+section:last-of-type button{
+    background-color: var(--mainBg);
+    border-bottom: 6px var(--lightGrey) solid;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    color: var(--whiteTxt);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section:last-of-type button:hover{
+    cursor: pointer;
+}
+
+section:last-of-type>div>div>div{
+    margin-bottom: 10px;
 }
 
 @media screen and (max-width: 768px) {
