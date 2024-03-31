@@ -199,6 +199,8 @@ section:nth-of-type(5)>div>div:not(:last-of-type)>div>button{
 
 section:nth-of-type(5) button>img{
     transform: rotate(90deg);
+    height: 24px;
+    width: 24px;
 }
 
 section:nth-of-type(5) button:hover{
