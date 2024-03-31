@@ -5,6 +5,8 @@
     --whiteTxt: #ffffff;
     --red: #e50914;
     --links: rgba(255,255,255,0.7);
+    --hover: #161616b3;
+    --border: #808080b3;
 }
 
 *{
@@ -22,7 +24,7 @@ body{
 }
 
 .container{
-    padding: 10px;
+    padding: 20px;
     width: min(1300px,90vw);
     margin: 0 auto;
     
@@ -92,8 +94,8 @@ header>div>div:last-of-type p{
 
 header>div>div:last-of-type>div>div{
     display: flex;
-    flex-flow: column nowrap;
-    gap: 15px;
+    flex-flow: row wrap;
+    gap: 10px;
     align-items: center;
     margin: 25px 0 0 0;
 }
@@ -115,6 +117,7 @@ header>div>div:last-of-type button{
     max-width: max(10vw,200px);
     font-size: larger;
     padding: 10px 15px;
+    align-self: center;
 }
 
 
@@ -123,9 +126,9 @@ header input{
     padding: 7px 15px;
     background-color: var(--lightGrey);
     color: var(--whiteTxt);
-    border: 1px solid var(--mainBg);
+    border: 1px solid var(--border);
     opacity: 90%;
-    width: min(80%,650px);
+    width: min(80%,400px);
     line-height: 2;
     font-size: inherit;
     border-radius: 5px;
@@ -137,7 +140,7 @@ header input:invalid{
 }
 
 header input:placeholder-shown{
-    border: 1px solid var(--mainBg);
+    border: 1px solid var(--border);
 }
 
 header input:valid{
@@ -158,7 +161,7 @@ header,section{
 }
 
 section{
-    padding: max(3vw,60px) 0;
+    padding: max(2vw,10px) 0;
 }
 
 section:first-of-type>div {
@@ -203,8 +206,9 @@ section:nth-of-type(5) button>img{
     width: 24px;
 }
 
-section:nth-of-type(5) button:hover{
+section:nth-of-type(5)>div>div:not(:last-of-type)>div>button:hover{
     cursor: pointer;
+    background-color: var(--hover);
 }
 
 section:nth-of-type(5)>div>div:not(:last-of-type)>div{
@@ -214,7 +218,6 @@ section:nth-of-type(5)>div>div:not(:last-of-type)>div{
 section:last-of-type>div>div:last-of-type {
     display: flex;
     flex-direction: column;
-    /* flex-grow: 1; */
     justify-content: center;
     text-align: center;
     align-items: center;
@@ -233,9 +236,9 @@ section:last-of-type>div>div:last-of-type input{
     padding: 7px 15px;
     background-color: var(--lightGrey);
     color: var(--whiteTxt);
-    border: 1px solid var(--mainBg);
+    border: 1px solid var(--border);
     opacity: 90%;
-    width: min(85%,650px);
+    width: min(100%,650px);
     line-height: 2;
     font-size: inherit;
     border-radius: 5px;
@@ -258,15 +261,17 @@ section:last-of-type>div>div:last-of-type>div {
     gap: 15px;
     align-items: center;
     width: 100%;
-    padding: 15px;
+    padding: 0;
 }
 
-footer{
-    padding: 30px 0 ;
+footer>div{
+    display: flex;
+    flex-direction: column;
 }
 
 footer a{
     color: var(--links);
+    font-size: 14px;
 }
 
 footer>div>ul{
@@ -291,6 +296,24 @@ footer>div>div>ul{
     height: 150px;
 }
 
+footer>div select{
+    background-color: var(--lightGrey);
+    color: var(--whiteTxt);
+    padding: 5px 20px;
+    border: 1px var(--border) solid;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 140px;
+}
+
+footer>div p{
+    width: fit-content;
+    margin-top: 20px;
+    font-size: 1rem;
+    color: var(--links);
+}
+
 
 @media screen and (max-width: 768px) {
     .container{
@@ -305,5 +328,13 @@ footer>div>div>ul{
 
     footer>div>div>ul{
         height: 300px;
+    }
+
+    header>div>div:last-of-type button{
+        margin: 0 auto;
+    }
+
+    header>div>div:last-of-type input{
+        width: 100%;
     }
 }
