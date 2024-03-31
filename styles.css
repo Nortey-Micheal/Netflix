@@ -4,6 +4,7 @@
     --blackBg: #000000;
     --whiteTxt: #ffffff;
     --red: #e50914;
+    --links: rgba(255,255,255,0.7);
 }
 
 *{
@@ -51,7 +52,7 @@ header{
     height: max(490px,35vw);
 }
 
-header,section{
+header,section,footer{
     background-color: var(--blackBg);
 }
 
@@ -258,6 +259,37 @@ section:last-of-type>div>div:last-of-type>div {
     padding: 15px;
 }
 
+footer{
+    padding: 30px 0 ;
+}
+
+footer a{
+    color: var(--links);
+}
+
+footer>div>ul{
+    margin-bottom: 20px;
+}
+
+footer ul{
+    text-align: start;
+    list-style: none;
+}
+
+footer>div>div{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer>div>div>ul{
+    display: flex;
+    flex-flow: column wrap;
+    gap: 15px;
+    flex-grow: 1;
+    height: 150px;
+}
+
+
 @media screen and (max-width: 768px) {
     .container{
         margin: 0;
@@ -267,5 +299,9 @@ section:last-of-type>div>div:last-of-type>div {
     section:not(:last-of-type)>div {
         display: block;
         text-align: center;
+    }
+
+    footer>div>div>ul{
+        height: 300px;
     }
 }
