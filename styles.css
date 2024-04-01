@@ -396,7 +396,6 @@ footer>div p{
     color: var(--links);
 }
 
-
 @media screen and (max-width: 768px) {
     .container{
         margin: 0;
@@ -445,5 +444,13 @@ footer>div p{
     section:first-of-type>div>div:last-of-type>video{
         width: min(calc(630px - 3vw),calc(80vw - 100px));
         left: calc(65% - 4vw);
+    }
+}
+
+@media screen and (max-width: 416px){
+    section:first-of-type>div>div:last-of-type>video{
+        width: min(calc(630px - 2vw),calc(80vw - 100px));
+        left: calc(54% - 3.9vw);
+        top: calc(60% + 3vw);
     }
 }
